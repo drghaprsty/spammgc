@@ -1,1 +1,1 @@
-worker: python3 haku.py
+worker: python3 var.py
