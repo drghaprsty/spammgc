@@ -1,12 +1,20 @@
 import random
-from pyrogram import Client
 import time
+import os
+from pyrogram import Client
+from dotenv import load_dotenv
+import logging
 
-api_id = '1634450'
-api_hash = '1a42e816cae8d86e71a4c466bba19b8c'
-sstring = 'BQAY8JIAL5G47q8ilduioehpYyKc7lSF-qqh3PX_Zfjs0S2I_F567ePC-HqsDzARZwLbYsoNKdt4NunkDfbiEkAFnCWFQmLaXu6c94-NE4Rggiw-eQvRhtpeNIciGKbGfAp7xgovZh7kt8cJMGF1pr1jeRqAyMxz3Kymvs-_VvTEf4eEjI8ly7CBfd3kOyzGqZZTteCm9xXoQi4DmCZ57OZx3JU_DkSObNvz3xloGPACWUO89xyvS-Juw3mMKoU-ilgtgpuKzQ78MP1-5xgG3W51K77ksX1tWnGwHV6E1UGK9NaRWF1WF13LmnDn4LS6SsATyF9kiebZtNXourHacJpt6XKxuQAAAAA4nAPUAA'
+load_dotenv(".env")
+
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+sstring = os.getenv("SESSION")
 
 app = Client(name="haku", session_string=sstring, api_id=api_id, api_hash=api_hash)
+
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 messages = [
     ".gcast AAD4 Y4ANG LAG91 VIR4AL DIBI0OHKOUUU🥵",
@@ -18,9 +26,11 @@ messages = [
 ]
 
 def send_message():
-    chat_id = int(949748692)
+    x = app.get_me()
+    chat_id = x.id
     message = random.choice(messages)
     app.send_message(chat_id=chat_id, text=message)
+    logger.info(f"Message sent to chat {chat_id}: {message}")
 
 with app:
     while True:

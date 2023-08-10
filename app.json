@@ -1,0 +1,20 @@
+{
+  "name": "AutoSendPesan",
+  "env": {
+    "SESSION": {
+      "description": "You Know Lah",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
