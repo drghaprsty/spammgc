@@ -17,12 +17,12 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 messages = [
-    ".gcast AAD4 Y4ANG LAG91 VIR4AL DIBI0OHKOUUU🥵",
-    ".gcast 𝚅𝙸𝚁a𝙰𝙻 𝚃𝙸𝙺𝚃𝙾o𝙺 𝙳𝙸𝙿𝚁𝙾𝙵𝙸𝙻𝙺i𝚄𝙷🥵",
-    ".gcast ASUEP4AN MANJAAHHH DIBIEO0HHKUH🥵",
-    ".gcast BANYAK KONTHEN HIJ4B DIBIE0H🥵",
-    ".gcast SK4NDAL VID3O V1R4LS DIPROF1LKUH🥵",
-    ".gcast AD4H Y4N9 LAG1 V1RAL BANG3T DIB1OHKUUU",
+    ".gcast ᴀsᴜᴘᴀɴ ᴠɪʀᴀʟ ᴅɪᴘʀᴏꜰɪʟᴋᴜ",
+    ".gcast ᴀᴅᴀ ʏɢ ᴍᴀɴᴛᴀᴘ ᴅɪʙɪᴇᴏᴋᴜ",
+    ".gcast ᴘᴇᴍᴇʀsᴀᴛᴜ ʙᴀɴɢsᴀ ʙɢᴛ ᴅɪᴘʀᴏꜰɪʟᴋᴜʜ",
+    ".gcast ʏɢ ʙɪᴋɪɴ ᴇɴᴀᴋ ᴀᴅᴀ ᴅɪʙɪᴏᴇᴋᴜ",
+    ".gcast sᴋᴀɴᴅʜᴀʟ ᴠɪʀᴀʟᴇ ᴅɪʙɪᴇᴜᴏᴋᴜ",
+    ".gcast ᴀᴅᴀ ʏᴀɴɢ ʟᴀɢɪ ʀᴀᴍᴇ ᴅɪᴛɪᴋᴛᴏᴋ ᴅɪʙɪʏᴏᴋᴜʜ",
 ]
 
 def send_message():
